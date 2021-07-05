@@ -7,11 +7,11 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: green;
+  color: RED;
 }
 
 .button {
-  background-color: green;
+  background-color: RED;
   color: #999;
   padding: 8px 32px;
   text-transform: uppercase;
@@ -19,11 +19,11 @@ a:hover {
   border-radius: 10px;
 }
 .button:hover {
-  background-color: rgba(0, 128, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.8);
 }
 
 #logo {
-  color: green;
+  color: RED;
   font-weight: bold;
   font-size: 24px;
   text-transform: uppercase;
@@ -62,7 +62,7 @@ main h1 {
   font-size: 48px;
 }
 main h1 span {
-  color: green;
+  color: RED;
 }
 main h1 small {
   display: block;
