@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>@import</title>
+</head>
+<style>
+    body {
+        margin-top: 50px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    h1,h2{
+        background-color: green;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: white;
+    }
+
+    .important {
+        color: red;
+        text-transform: uppercase;
+        margin-top: 50px;
+        font-size: xx-large;
+    }
+
+    footer {
+        background-color: red;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: white;
+        
+    }
+</style>
+
+<body>
+    <h1>@IMPORT</h1>
+    <p>
+        As importaçôes sass têm a mesma sintaxe das importações CSS, esceto que permitem que várias importações sejam
+        separas por virgulas, em vez de exigir que cada uma tenho seu próprio @import.
+    </p>
+    <p>
+        Além disso, na sintaxe recuada, os urls importados não precisam ter aspas.
+    </p>
+    <div class="important">
+        <h2>IMPORTANTE</h2>
+        <p>
+            "A equipe SASS desencoraja o uso continuio da regra @import. Sass irá gradualmente elimina-lo ao longo dos
+            próximos anos e eventualmente, removê-lo inteiramente da linguagem."
+        </p>
+        <p>
+            " Em vez disso, prefira a regra @use.(Observe que apenas o Dart Sass suporta atualmente @use. Usuários de
+            outras implementações devem usar a regra @import.)"
+        </p>
+    </div>
+
+    <h2>Problemas com @import</h2>
+    <p>
+        A regra @import torna todas variáveis, mixins e funções globalmente acessiveis. Isso torna muito dificil para as
+        pessoas (ou ferramentas) saberem onde algo está definido.
+    </p>
+    <p>
+        Como tudo é global, as bibliotecas devem prefixar todoso os seus membros para evitar colisões de nomes.
+    </p>
+    <p>
+        As regras @extend também são globais, o que torna dificil prever quais regras de estilo serão estendidas.
+    </p>
+    <p>
+        Cada folha de estilo é executada e seu CSS emitido sempre que é importado, o que aumenta o tempo de compilação e
+        produz uma saída inchada.
+    </p>
+    <p>
+        Não havia como definir membros privados ou seletores de espaço reservado inacessiveis para flhas de estilo
+        downstream.
+    </p>
+    <h2>
+        Migrando de @import para @use
+    </h2>
+    <p>
+        O novo sistema de módulo e a regra @use tratam de todos esses problemas. COMO FAÇO PARA MIGRAR?
+    </p>
+    <p>
+        A equipe SASS escreveu uma ferramenta de migração que converte automaticamente a maioria do código baseado em @import para código baseado em @use em um instante. Basta apontá-lo para seus arquivos de entrada e deixa-lo funcionar.
+    SASS-MIGRATOR
+    </p>
+ 
+</body>
+<footer>
+    TEXTO PARA SALVAR ANEXADO CASO UM DIA PRECISE DESSAS INFORMAÇÕES
+</footer>
+
+</html>
